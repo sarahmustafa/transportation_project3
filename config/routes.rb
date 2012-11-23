@@ -1,4 +1,8 @@
 TransportationProject3::Application.routes.draw do
+  get "navigation/index"
+
+  resources :customers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
