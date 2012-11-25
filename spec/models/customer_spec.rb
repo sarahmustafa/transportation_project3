@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe Customer do
-  #it {should have_many(:orders)}
+  it {should have_many(:orders)}
   
   describe "testing validations" do
+
     it {should validate_presence_of(:first_name)}
     it {should validate_presence_of(:last_name)}
     it {should validate_presence_of(:address)}
@@ -60,11 +61,11 @@ describe Customer do
     end
 
    it "returns the proper name correctly" do
-   @zuhair.proper_name.should == "Zuhair Galib"
+   @zuhair.proper_name.should == "Zuhair Ghalib"
    end
 
    it "returns the name correctly" do
-     @zuhair.name.should == "Galib, Zuhair"
+     @zuhair.name.should == "Ghalib, Zuhair"
    end
 
    it "should strip everything but numbers for the phone" do

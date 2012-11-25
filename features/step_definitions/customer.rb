@@ -1,7 +1,7 @@
 Given /^an initial business$/ do
-   @Sarah = FactoryGirl.create(:customer, :first_name => "Sarah")
+   @Sarah = FactoryGirl.create(:customer, :first_name => "Sarah", :last_name => "Mustafa")
   @zuhair = FactoryGirl.create(:customer)
-   @haya = FactoryGirl.create(:customer, :first_name => "Haya")
+   @haya = FactoryGirl.create(:customer, :first_name => "Haya", :last_name => "Thawfeek")
 end
 
 Given /^i am on the 'new customer' page$/ do
@@ -40,7 +40,7 @@ When /^I follow the "(.*?)" link for "(.*?)"$/ do |link, cell_value|
 end
 
 When /^I change the email address "(.*?)" to "(.*?)"$/ do |oldmail, newmail|
-  fill_in "email", :with => newmail
+  fill_in "Email", :with => newmail
 end
 
 When /^I click the button "(.*?)"$/ do |buttonname|

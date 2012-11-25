@@ -1,10 +1,11 @@
 TransportationProject3::Application.routes.draw do
+  resources :orders
+
   get "navigation/index"
 
   resources :customers
-
-    get "home/index"
-    get "customer/new"
+  get "home/index"
+  get "customer/new"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
