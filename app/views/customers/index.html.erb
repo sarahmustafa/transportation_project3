@@ -1,13 +1,10 @@
-<h1>Listing customers</h1>
+<title>Listing Customers</title>
 
 <table>
   <tr>
-    <th>Customer</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>City</th>
-    <th>Telephone number</th>
-    <th>Address</th>
+    <th>Customer id</th>
+	<th>Customer Name</th>
+    <th>Telephone Number</th>
     <th>Email</th>
     <th></th>
     <th></th>
@@ -16,12 +13,9 @@
 
 <% @customers.each do |customer| %>
   <tr>
-    <td><%= customer.customer_id %></td>
-    <td><%= customer.first_name %></td>
-    <td><%= customer.last_name %></td>
-    <td><%= customer.city %></td>
+	<td><%= customer.customer_id %></td>
+    <td><%= customer.name %></td>
     <td><%= customer.telephone_number %></td>
-    <td><%= customer.address %></td>
     <td><%= customer.email %></td>
     <td><%= link_to 'Show', customer %></td>
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
