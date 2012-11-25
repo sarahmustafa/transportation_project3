@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :customer do
+    
     first_name "Zuhair"
     last_name "Galib"
     address "PO BOX 234866"
