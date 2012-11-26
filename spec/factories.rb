@@ -19,5 +19,9 @@ FactoryGirl.define do
     association :customer
   end
     
-    
+  factory :user do
+    email "sarahmustafa93@gmail.com"
+    password "mmngmhs"
+    password_confirmation "mmngmhs"
+  end    
 end

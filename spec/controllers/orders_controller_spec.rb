@@ -25,14 +25,21 @@ describe OrdersController do
   # update the return value of this method accordingly.
   def valid_attributes
 
-      
-      {:order_time => Time.now,
-        :order_date => 20/10/2012, 
+     c = Customer.create(:first_name => "Sarah",
+        :last_name => "Mustafa",
+        :email => "smustafa@qatar.cmu.edu",
+        :telephone_number => "+974-4499-1457",
+        :city => "Doha",
+        :address => "PO BOX 2345")
+      {
+        :order_time => Time.now,
+        :order_date => Date.today,
         :pickup_time => Time.now + 2.hour, 
-        :pickup_date => 21/10/2012,
-        :destination => "here", 
-        :number_of_passengers => 3
-        }
+        :pickup_date => Date.today,
+        :destination => "here",
+        :number_of_passengers => 3,
+        :customer_id => c.id
+      }
       
   end
 

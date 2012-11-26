@@ -11,6 +11,7 @@ end
 gem 'jquery-rails'
 
 gem 'heroku'
+gem 'bcrypt-ruby'
 
 group :production do
   gem 'pg'
