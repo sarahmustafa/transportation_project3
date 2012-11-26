@@ -1,4 +1,13 @@
 FactoryGirl.define do
+
+  factory :vehicle do
+    make "Nissan"
+    model "Camper"
+    color "Red"
+    license_plate "1234456"
+    description "Relevant description"
+  end
+
   factory :customer do
     first_name "Zuhair"
     last_name "Ghalib"

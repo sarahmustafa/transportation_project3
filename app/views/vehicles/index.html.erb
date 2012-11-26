@@ -1,0 +1,33 @@
+<title>Listing Vehicles</title>
+
+<div class ="span12 offset1">
+<h1>Listing Vehicles</h1>
+
+<div class ="well">
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Color</th>
+    <th>License plate</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th></th>
+  </tr>
+
+<% @vehicles.each do |vehicle| %>
+  <tr>
+    <td><%= vehicle.make %></td>
+    <td><%= vehicle.model %></td>
+    <td><%= vehicle.color %></td>
+    <td><%= vehicle.license_plate %></td>
+    <td><%= vehicle.description %></td>
+    <td><img src = "<%= vehicle.image_url%>"> </td>
+    <td></td>
+    </tr>
+<% end %>
+</table>
+</div>
+</div>
+
+

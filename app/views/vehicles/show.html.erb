@@ -1,0 +1,33 @@
+
+
+<div class ="span12 offset1">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Vehicle Information</h1>
+  <div class ="well">
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Color</th>
+    <th>License plate</th>
+    <th>Description</th>
+    <th>Image</th>
+  </tr>
+
+<tr>
+    <td><%= @vehicle.make %></td>
+    <td><%= @vehicle.model %></td>
+    <td><%= @vehicle.color %></td>
+    <td><%= @vehicle.license_plate %></td>
+    <td><%= @vehicle.description %></td>
+    <td><%= image_tag @vehicle.image_url.to_s %></td>
+    </tr>
+</table>
+
+</div>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>
+</div>

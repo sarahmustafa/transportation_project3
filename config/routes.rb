@@ -1,4 +1,6 @@
 TransportationProject3::Application.routes.draw do
+  resources :vehicles
+
   resources :orders
   resources :customers
 

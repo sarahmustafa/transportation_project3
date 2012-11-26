@@ -24,11 +24,11 @@ Given /^I am on the 'customers' page$/ do
   visit customers_path
 end
 
-Then /^in the "(.*?)", I should see "(.*?)"$/ do |arg1, arg2|
+Then /^in the "(.*?)", I should see "(.*?)"$/ do |tag, value|
   page.should have_css(tag, :text => value)
 end
 
-Then /^in the "(.*?)", I should see a link to "(.*?)"$/ do |arg1, arg2|
+Then /^in the "(.*?)", I should see a link to "(.*?)"$/ do |tag, value|
   page.should have_css(tag, :text => value)
 end
 
