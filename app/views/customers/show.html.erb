@@ -1,37 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 
+<table class="table table-bordered table-striped">
+  <tr>
+   
+  <th>Customer Name</th>
+    <th>Telephone Number</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<p>
-  <b>First name:</b>
-  <%= @customer.first_name %>
-</p>
+  <tr>
 
-<p>
-  <b>Last name:</b>
-  <%= @customer.last_name %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @customer.city %>
-</p>
-
-<p>
-  <b>Telephone number:</b>
-  <%= @customer.telephone_number %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @customer.address %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @customer.email %>
-</p>
-
+    <td><%= customer.name %></td>
+    <td><%= customer.telephone_number %></td>
+    <td><%= customer.email %></td>
+    </tr>
+</table>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', orders_path %> 

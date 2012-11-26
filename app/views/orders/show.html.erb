@@ -1,55 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Customer:</b>
-  <%= @order.customer_id %>
-</p>
-
-<p>
-  <b>Vehicle:</b>
-  <%= @order.vehicle_id %>
-</p>
-
-<p>
-  <b>Order time:</b>
-  <%= @order.order_time %>
-</p>
-
-<p>
-  <b>Order date:</b>
-  <%= @order.order_date %>
-</p>
-
-<p>
-  <b>Pickup time:</b>
-  <%= @order.pickup_time %>
-</p>
-
-<p>
-  <b>Pickup date:</b>
-  <%= @order.pickup_date %>
-</p>
-
-<p>
-  <b>Pickup address:</b>
-  <%= @order.pickup_address %>
-</p>
-
-<p>
-  <b>Destination:</b>
-  <%= @order.destination %>
-</p>
-
-<p>
-  <b>Number of passengers:</b>
-  <%= @order.number_of_passengers %>
-</p>
-
-<p>
-  <b>Driver:</b>
-  <%= @order.driver %>
-</p>
-
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Customer</th>
+    <th>Vehicle</th>
+    <th>Order time</th>
+    <th>Order date</th>
+    <th>Pickup time</th>
+    <th>Pickup date</th>
+    <th>Pickup address</th>
+    <th>Destination</th>
+    <th>Number of passengers</th>
+    <th>Driver</th>
+ </tr>
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.customer_id %></td>
+    <td><%= order.vehicle_id %></td>
+    <td><%= order.order_time %></td>
+    <td><%= order.order_date %></td>
+    <td><%= order.pickup_time %></td>
+    <td><%= order.pickup_date %></td>
+    <td><%= order.pickup_address %></td>
+    <td><%= order.destination %></td>
+    <td><%= order.number_of_passengers %></td>
+    <td><%= order.driver %></td>
+</tr>
+</table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

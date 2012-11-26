@@ -1,6 +1,9 @@
 <title>Listing orders</title>
 
-<table>
+<div class ="span12 offset1">
+    <h1>Listing orders</h1>
+<div class ="well">
+<table class="table table-bordered table-striped">
   <tr>
     <th>Customer</th>
     <th>Vehicle</th>
@@ -12,10 +15,7 @@
     <th>Destination</th>
     <th>Number of passengers</th>
     <th>Driver</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+ </tr>
 
 <% @orders.each do |order| %>
   <tr>
@@ -29,11 +29,12 @@
     <td><%= order.destination %></td>
     <td><%= order.number_of_passengers %></td>
     <td><%= order.driver %></td>
-    <td><%= link_to 'Show', order %></td>
-  </tr>
+</tr>
 <% end %>
 </table>
 
 <br />
 
 <%= link_to 'New Order', new_order_path %>
+</div>
+</div>

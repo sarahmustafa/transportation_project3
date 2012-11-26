@@ -8,6 +8,8 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+ p.oblique {font-style:oblique;}
+
 article,
 aside,
 details,
@@ -149,7 +151,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #DDD8C2;
 }
 a {
   color: #dd4814;

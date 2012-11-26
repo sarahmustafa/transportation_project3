@@ -23,7 +23,7 @@
     <td><%= vehicle.license_plate %></td>
     <td><%= vehicle.description %></td>
     <td><img src = "<%= vehicle.image_url%>"> </td>
-    <td></td>
+    <td><%= link_to 'Order/Rent', orders_path %></td>
     </tr>
 <% end %>
 </table>
