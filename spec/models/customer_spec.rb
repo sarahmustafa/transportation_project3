@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe Customer do
-  #it {should have_many(:orders)}
+  it {should have_many(:orders)}
   
   describe "testing validations" do
-    it {should validate_presence_of(:customer_id)}
+
     it {should validate_presence_of(:first_name)}
     it {should validate_presence_of(:last_name)}
     it {should validate_presence_of(:address)}
@@ -57,15 +57,15 @@ describe Customer do
     end
 
     it "returns all the records in alphabatical order" do
-    Owner.alphabetical.map{|o| o.first_name}.should == ["Haya", "Sarah", "Zuahir"]
+    Customer.alphabetical.map{|o| o.first_name}.should == ["Haya", "Sarah", "Zuhair"]
     end
 
    it "returns the proper name correctly" do
-   @Zuhair.proper_name.should == "Zuahir Galib"
+   @zuhair.proper_name.should == "Zuhair Ghalib"
    end
 
    it "returns the name correctly" do
-     @zuhair.name.should == "Galib, Zuahir"
+     @zuhair.name.should == "Ghalib, Zuhair"
    end
 
    it "should strip everything but numbers for the phone" do

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer:</b>
+  <%= @order.customer_id %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @order.vehicle_id %>
+</p>
+
+<p>
+  <b>Order time:</b>
+  <%= @order.order_time %>
+</p>
+
+<p>
+  <b>Order date:</b>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <b>Pickup time:</b>
+  <%= @order.pickup_time %>
+</p>
+
+<p>
+  <b>Pickup date:</b>
+  <%= @order.pickup_date %>
+</p>
+
+<p>
+  <b>Pickup address:</b>
+  <%= @order.pickup_address %>
+</p>
+
+<p>
+  <b>Destination:</b>
+  <%= @order.destination %>
+</p>
+
+<p>
+  <b>Number of passengers:</b>
+  <%= @order.number_of_passengers %>
+</p>
+
+<p>
+  <b>Driver:</b>
+  <%= @order.driver %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
